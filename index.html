@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Estudiante - Seamos Genios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <img src="https://seamosgenios.org/Elementos/img/logo1.png" alt="Seamos Genios" class="logo">
+            <span class="brand-name">Seamos Genios</span>
+        </div>
+        <div class="header-right">
+            <div class="coins-badge">
+                <span class="coin-icon">🪙</span>
+                <span class="coin-amount">850</span>
+            </div>
+            <div class="energy-badge">
+                <svg class="energy-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 2v11h3v9l7-12h-4l4-8z" />
+                </svg>
+                <div class="energy-info">
+                    <span class="energy-amount">5/5</span>
+                    <span class="energy-timer" id="energy-timer">FULL</span>
+                </div>
+            </div>
+            <div class="user-profile">
+                <img src="https://seamosgenios.org/Elementos/img/logo1.png" alt="Usuario Demo" class="user-avatar">
+                <span class="user-name">Usuario Demo</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-dashboard">
+        <!-- Welcome Card -->
+        <div class="welcome-card">
+            <div class="welcome-header">
+                <div class="user-info">
+                    <img src="https://seamosgenios.org/Elementos/img/logo1.png" alt="Usuario Demo"
+                        class="user-avatar-large">
+                    <div class="user-details">
+                        <h1 class="greeting">¡Hola, Usuario Demo!</h1>
+                        <div class="user-stats-inline">
+                            <span class="stat-item">
+                                <span class="stat-icon">📅</span>
+                                Racha: 8 días
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="xp-section" id="xp-section">
+                    <div class="xp-display">
+                        <span class="xp-level">Nivel General 1</span>
+                        <span class="xp-current">312</span>
+                        <span class="xp-total"> / 500 XP</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill" style="width: 62.4%"></div>
+                    </div>
+                    <p class="xp-message" id="xp-message">188 XP para nivel 2</p>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon-circle">🔥</div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">8</h3>
+                        <p class="stat-label">Días de Racha</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-circle">🏆</div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">#3</h3>
+                        <p class="stat-label">Ranking Global</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-circle">✅</div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">24</h3>
+                        <p class="stat-label">Tareas Completadas</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-circle">🎖️</div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">5</h3>
+                        <p class="stat-label">Logros Desbloqueados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="desafios">
+                <span class="tab-icon">🎯</span>
+                Desafíos
+            </button>
+            <button class="tab-btn" data-tab="materias">
+                <span class="tab-icon">📚</span>
+                Materias
+            </button>
+            <button class="tab-btn" data-tab="ranking">
+                <span class="tab-icon">🏆</span>
+                Ranking
+            </button>
+            <button class="tab-btn" data-tab="logros">
+                <span class="tab-icon">🎖️</span>
+                Logros
+            </button>
+            <button class="tab-btn" data-tab="tienda">
+                <span class="tab-icon">🛒</span>
+                Tienda
+            </button>
+        </nav>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <div id="desafios" class="tab-pane active">
+                <div id="subject-selection" class="subject-selection">
+                    <h2 class="section-title">Selecciona una Materia</h2>
+                    <div class="subjects-grid">
+                        <div class="subject-card" data-subject="matematicas">
+                            <div class="subject-icon" style="background: #1E88E5;">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-2h2v2zm0-4H7v-2h2v2zm0-4H7V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                                </svg>
+                            </div>
+                            <h3>Matemáticas</h3>
+                            <p>Álgebra, geometría, cálculo y más</p>
+                        </div>
+
+                        <div class="subject-card" data-subject="lectura">
+                            <div class="subject-icon" style="background: #E53935;">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z" />
+                                </svg>
+                            </div>
+                            <h3>Lectura Crítica</h3>
+                            <p>Comprensión lectora y análisis de textos</p>
+                        </div>
+
+                        <div class="subject-card" data-subject="sociales">
+                            <div class="subject-icon" style="background: #FB8C00;">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                                </svg>
+                            </div>
+                            <h3>Ciencias Sociales</h3>
+                            <p>Historia, geografía y ciudadanía</p>
+                        </div>
+
+                        <div class="subject-card" data-subject="naturales">
+                            <div class="subject-icon" style="background: #43A047;">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.30C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z" />
+                                </svg>
+                            </div>
+                            <h3>Ciencias Naturales</h3>
+                            <p>Biología, química y física</p>
+                        </div>
+
+                        <div class="subject-card" data-subject="ingles">
+                            <div class="subject-icon" style="background: #8E24AA;">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" />
+                                </svg>
+                            </div>
+                            <h3>Inglés</h3>
+                            <p>Gramática, vocabulario y comprensión</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="challenge-path" class="challenge-path" style="display: none;">
+                    <div class="path-header">
+                        <button class="back-btn" id="back-to-subjects">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                            </svg>
+                            Volver a Materias
+                        </button>
+                    </div>
+                    <h2 class="section-title" id="path-title">Matemáticas ICFES</h2>
+                    <p class="path-subtitle">UNIDAD 1: ÁLGEBRA Y ECUACIONES</p>
+
+                    <div class="path-container">
+                        <div class="challenge-node completed" data-challenge="1">
+                            <div class="node-circle">
+                                <svg class="node-icon" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="white" />
+                                </svg>
+                            </div>
+                            <div class="node-stars">
+                                <svg class="star filled" viewBox="0 0 24 24" fill="#FFD700"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="star filled" viewBox="0 0 24 24" fill="#FFD700"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="star filled" viewBox="0 0 24 24" fill="#FFD700"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                            <div class="node-label">Desafío 1</div>
+                        </div>
+
+                        <svg class="path-line line-1" viewBox="0 0 10 100" preserveAspectRatio="none">
+                            <line x1="5" y1="0" x2="5" y2="100" stroke="#43A047" stroke-width="6"
+                                stroke-linecap="round" />
+                        </svg>
+
+                        <div class="challenge-node completed" data-challenge="2">
+                            <div class="node-circle">
+                                <svg class="node-icon" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="white" />
+                                </svg>
+                            </div>
+                            <div class="node-stars">
+                                <svg class="star filled" viewBox="0 0 24 24" fill="#FFD700"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="star filled" viewBox="0 0 24 24" fill="#FFD700"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24" fill="#E0E0E0" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                            <div class="node-label">Desafío 2</div>
+                        </div>
+
+                        <svg class="path-line line-2" viewBox="0 0 10 100" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#43A047;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#e63946;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <line x1="5" y1="0" x2="5" y2="100" stroke="url(#gradient2)" stroke-width="6"
+                                stroke-linecap="round" />
+                        </svg>
+
+                        <div class="challenge-node active" data-challenge="3">
+                            <div class="node-circle">
+                                <svg class="node-icon" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2v-4H8v-2h4V7h2v4h4v2h-4v4z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="node-badge">3</div>
+                            <div class="node-label">Desafío 3</div>
+                        </div>
+
+                        <svg class="path-line line-3" viewBox="0 0 10 100" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e63946;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#bdbdbd;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <line x1="5" y1="0" x2="5" y2="100" stroke="url(#gradient3)" stroke-width="6"
+                                stroke-linecap="round" />
+                        </svg>
+
+                        <div class="challenge-node locked" data-challenge="4">
+                            <div class="node-circle">
+                                <svg class="node-icon" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                                        fill="#757575" />
+                                </svg>
+                            </div>
+                            <div class="node-label">Desafío 4</div>
+                        </div>
+
+                        <svg class="path-line line-4" viewBox="0 0 10 100" preserveAspectRatio="none">
+                            <line x1="5" y1="0" x2="5" y2="100" stroke="#bdbdbd" stroke-width="6"
+                                stroke-linecap="round" />
+                        </svg>
+
+                        <div class="challenge-node locked" data-challenge="5">
+                            <div class="node-circle">
+                                <svg class="node-icon" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"
+                                        fill="#757575" />
+                                </svg>
+                            </div>
+                            <div class="node-label">Desafío 5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="materias" class="tab-pane">
+                <div class="materias-header">
+                    <h2 class="section-title">Mis Materias</h2>
+                    <div class="calendar-filter">
+                        <label for="calendar-select">Calendario:</label>
+                        <select id="calendar-select" class="calendar-dropdown">
+                            <option value="preicfes">Pre-ICFES (Todas)</option>
+                            <option value="calendarioA">Calendario A</option>
+                            <option value="calendarioB">Calendario B</option>
+                            <option value="intensivo">Intensivo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="materias-grid" id="materias-grid">
+                    <!-- Matemáticas -->
+                    <div class="materia-card clickable-materia" data-calendars="preicfes,calendarioA,calendarioB,intensivo" data-materia-url="matematicas-aulas.html">
+                        <div class="materia-header" style="background: #1E88E5;">
+                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-2h2v2zm0-4H7v-2h2v2zm0-4H7V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                            </svg>
+                            <h3>Matemáticas</h3>
+                        </div>
+                        <div class="materia-body">
+                            <p class="materia-description">Álgebra, geometría, cálculo y más</p>
+                            <div class="materia-stats">
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">📊</span>
+                                    <span>3 anuncios</span>
+                                </div>
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">✅</span>
+                                    <span>5 materiales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lectura Crítica -->
+                    <div class="materia-card" data-calendars="preicfes,calendarioA,calendarioB,intensivo">
+                        <div class="materia-header" style="background: #E53935;">
+                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z" />
+                            </svg>
+                            <h3>Lectura Crítica</h3>
+                        </div>
+                        <div class="materia-body">
+                            <p class="materia-description">Comprensión lectora y análisis de textos</p>
+                            <div class="materia-stats">
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">📊</span>
+                                    <span>0 anuncios</span>
+                                </div>
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">✅</span>
+                                    <span>0 materiales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ciencias Sociales -->
+                    <div class="materia-card" data-calendars="preicfes,calendarioA,calendarioB">
+                        <div class="materia-header" style="background: #FB8C00;">
+                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                            </svg>
+                            <h3>Ciencias Sociales</h3>
+                        </div>
+                        <div class="materia-body">
+                            <p class="materia-description">Historia, geografía y ciudadanía</p>
+                            <div class="materia-stats">
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">📊</span>
+                                    <span>1 anuncio</span>
+                                </div>
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">✅</span>
+                                    <span>0 materiales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ciencias Naturales -->
+                    <div class="materia-card" data-calendars="preicfes,calendarioA,intensivo">
+                        <div class="materia-header" style="background: #43A047;">
+                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.30C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z" />
+                            </svg>
+                            <h3>Ciencias Naturales</h3>
+                        </div>
+                        <div class="materia-body">
+                            <p class="materia-description">Biología, química y física</p>
+                            <div class="materia-stats">
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">📊</span>
+                                    <span>0 anuncios</span>
+                                </div>
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">✅</span>
+                                    <span>0 materiales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inglés -->
+                    <div class="materia-card" data-calendars="preicfes,calendarioB,intensivo">
+                        <div class="materia-header" style="background: #8E24AA;">
+                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" />
+                            </svg>
+                            <h3>Inglés</h3>
+                        </div>
+                        <div class="materia-body">
+                            <p class="materia-description">Gramática, vocabulario y comprensión</p>
+                            <div class="materia-stats">
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">📊</span>
+                                    <span>0 anuncios</span>
+                                </div>
+                                <div class="stat-item-small">
+                                    <span class="stat-icon-small">✅</span>
+                                    <span>0 materiales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="ranking" class="tab-pane">
+            <h2 class="section-title">🏆 Ranking Global</h2>
+            
+            <!-- Top 3 Podium -->
+            <div class="ranking-podium">
+                <div class="podium-place second-place">
+                    <div class="podium-avatar">
+                        <img src="https://seamosgenios.org/Elementos/img/logo1.png" alt="2">
+                    </div>
+                    <div class="podium-medal silver">2</div>
+                    <h4 class="podium-name">Carlos Ramírez</h4>
+                    <p class="podium-xp">2,850 XP</p>
+                    <div class="podium-base second">2°</div>
+                </div>
+
+                <div class="podium-place first-place">
+                    <div class="podium-crown">👑</div>
+                    <div class="podium-avatar">
+                        <img src="https://seamosgenios.org/Elementos/img/logo1.png" alt="1">
+                    </div>
+                    <div class="podium-medal gold">1</div>
+                    <h4 class="podium-name">María González</h4>
+                    <p class="podium-xp">3,420 XP</p>
+                    <div class="podium-base first">1°</div>
+                </div>
+
+                <div class="podium-place third-place">
+                    <div class="podium-avatar">
+                        <img src="https://seamosgenios.org/Elementos/img/logo1.png" alt="3">
+                    </div>
+                    <div class="podium-medal bronze">3</div>
+                    <h4 class="podium-name">Usuario Demo</h4>
+                    <p class="podium-xp">2,640 XP</p>
+                    <div class="podium-base third">3°</div>
+                </div>
+            </div>
+
+            <!-- Ranking List -->
+            <div class="ranking-table">
+                <div class="ranking-row">
+                    <span class="rank-position">4</span>
+                    <img src="https://seamosgenios.org/Elementos/img/logo1.png" class="rank-avatar" alt="4">
+                    <span class="rank-name">Ana Martínez</span>
+                    <span class="rank-xp">2,380 XP</span>
+                </div>
+                <div class="ranking-row">
+                    <span class="rank-position">5</span>
+                    <img src="https://seamosgenios.org/Elementos/img/logo1.png" class="rank-avatar" alt="5">
+                    <span class="rank-name">Luis Torres</span>
+                    <span class="rank-xp">2,150 XP</span>
+                </div>
+                <div class="ranking-row">
+                    <span class="rank-position">6</span>
+                    <img src="https://seamosgenios.org/Elementos/img/logo1.png" class="rank-avatar" alt="6">
+                    <span class="rank-name">Sofia López</span>
+                    <span class="rank-xp">1,920 XP</span>
+                </div>
+                <div class="ranking-row">
+                    <span class="rank-position">7</span>
+                    <img src="https://seamosgenios.org/Elementos/img/logo1.png" class="rank-avatar" alt="7">
+                    <span class="rank-name">Diego Vargas</span>
+                    <span class="rank-xp">1,780 XP</span>
+                </div>
+                <div class="ranking-row">
+                    <span class="rank-position">8</span>
+                    <img src="https://seamosgenios.org/Elementos/img/logo1.png" class="rank-avatar" alt="8">
+                    <span class="rank-name">Valentina Cruz</span>
+                    <span class="rank-xp">1,650 XP</span>
+                </div>
+            </div>
+        </div>
+        <div id="logros" class="tab-pane">
+            <h2 class="section-title">🎖️ Mis Logros</h2>
+            
+            <div class="logros-stats">
+                <div class="logro-stat-card">
+                    <h3>5/20</h3>
+                    <p>Logros Desbloqueados</p>
+                </div>
+                <div class="logro-stat-card">
+                    <h3>25%</h3>
+                    <p>Progreso Total</p>
+                </div>
+            </div>
+
+            <div class="logros-grid">
+                <!-- Logro Desbloqueado -->
+                <div class="logro-card unlocked">
+                    <div class="logro-icon">🔥</div>
+                    <h3 class="logro-title">Primera Racha</h3>
+                    <p class="logro-description">Completa 3 días consecutivos de estudio</p>
+                    <div class="logro-reward">+50 XP • +20 Monedas</div>
+                    <div class="logro-badge">Desbloqueado</div>
+                </div>
+
+                <div class="logro-card unlocked">
+                    <div class="logro-icon">📚</div>
+                    <h3 class="logro-title">Estudiante Dedicado</h3>
+                    <p class="logro-description">Completa 10 desafíos</p>
+                    <div class="logro-reward">+100 XP • +50 Monedas</div>
+                    <div class="logro-badge">Desbloqueado</div>
+                </div>
+
+                <div class="logro-card unlocked">
+                    <div class="logro-icon">⭐</div>
+                    <h3 class="logro-title">Perfeccionista</h3>
+                    <p class="logro-description">Obtén 3 estrellas en 5 desafíos</p>
+                    <div class="logro-reward">+150 XP • +75 Monedas</div>
+                    <div class="logro-badge">Desbloqueado</div>
+                </div>
+
+                <div class="logro-card unlocked">
+                    <div class="logro-icon">🎯</div>
+                    <h3 class="logro-title">Primer Paso</h3>
+                    <p class="logro-description">Completa tu primer desafío</p>
+                    <div class="logro-reward">+25 XP • +10 Monedas</div>
+                    <div class="logro-badge">Desbloqueado</div>
+                </div>
+
+                <div class="logro-card unlocked">
+                    <div class="logro-icon">🏆</div>
+                    <h3 class="logro-title">Top 10</h3>
+                    <p class="logro-description">Entra al top 10 del ranking</p>
+                    <div class="logro-reward">+200 XP • +100 Monedas</div>
+                    <div class="logro-badge">Desbloqueado</div>
+                </div>
+
+                <!-- Logros Bloqueados -->
+                <div class="logro-card locked">
+                    <div class="logro-icon">🔒</div>
+                    <h3 class="logro-title">Racha de Fuego</h3>
+                    <p class="logro-description">Completa 7 días consecutivos</p>
+                    <div class="logro-progress">
+                        <div class="progress-bar-logro">
+                            <div class="progress-fill-logro" style="width: 57%"></div>
+                        </div>
+                        <span class="progress-text">4/7 días</span>
+                    </div>
+                </div>
+
+                <div class="logro-card locked">
+                    <div class="logro-icon">🔒</div>
+                    <h3 class="logro-title">Maestro Matemático</h3>
+                    <p class="logro-description">Completa todos los desafíos de matemáticas</p>
+                    <div class="logro-progress">
+                        <div class="progress-bar-logro">
+                            <div class="progress-fill-logro" style="width: 40%"></div>
+                        </div>
+                        <span class="progress-text">2/5 completados</span>
+                    </div>
+                </div>
+
+                <div class="logro-card locked">
+                    <div class="logro-icon">🔒</div>
+                    <h3 class="logro-title">Coleccionista</h3>
+                    <p class="logro-description">Desbloquea 10 logros</p>
+                    <div class="logro-progress">
+                        <div class="progress-bar-logro">
+                            <div class="progress-fill-logro" style="width: 50%"></div>
+                        </div>
+                        <span class="progress-text">5/10 logros</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tienda" class="tab-pane">
+            <h2 class="section-title">🛒 Tienda</h2>
+            
+            <div class="tienda-balance">
+                <div class="balance-card">
+                    <span class="balance-icon">🪙</span>
+                    <div class="balance-info">
+                        <span class="balance-amount">850</span>
+                        <span class="balance-label">Monedas</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="tienda-category-title">⚡ Energía</h3>
+            <div class="tienda-grid">
+                <div class="tienda-item">
+                    <div class="item-icon energy-icon">⚡</div>
+                    <h4 class="item-name">1 Energía</h4>
+                    <p class="item-description">Recupera 1 punto de energía al instante</p>
+                    <div class="item-footer">
+                        <span class="item-price">
+                            <span class="coin-icon-small">🪙</span> 50
+                        </span>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="tienda-item popular">
+                    <div class="popular-badge">Popular</div>
+                    <div class="item-icon energy-icon">⚡⚡⚡</div>
+                    <h4 class="item-name">3 Energías</h4>
+                    <p class="item-description">Recupera 3 puntos de energía</p>
+                    <div class="item-footer">
+                        <span class="item-price">
+                            <span class="coin-icon-small">🪙</span> 120
+                            <span class="discount">-20%</span>
+                        </span>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="tienda-item">
+                    <div class="item-icon energy-icon">⚡⚡⚡⚡⚡</div>
+                    <h4 class="item-name">Energía Completa</h4>
+                    <p class="item-description">Recupera toda tu energía (5 puntos)</p>
+                    <div class="item-footer">
+                        <span class="item-price">
+                            <span class="coin-icon-small">🪙</span> 180
+                            <span class="discount">-28%</span>
+                        </span>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="tienda-category-title">🎁 Potenciadores</h3>
+            <div class="tienda-grid">
+                <div class="tienda-item">
+                    <div class="item-icon boost-icon">2️⃣✖️</div>
+                    <h4 class="item-name">Doble XP</h4>
+                    <p class="item-description">Duplica el XP ganado por 1 hora</p>
+                    <div class="item-footer">
+                        <span class="item-price">
+                            <span class="coin-icon-small">🪙</span> 200
+                        </span>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="tienda-item">
+                    <div class="item-icon boost-icon">💰</div>
+                    <h4 class="item-name">Doble Monedas</h4>
+                    <p class="item-description">Duplica las monedas ganadas por 1 hora</p>
+                    <div class="item-footer">
+                        <span class="item-price">
+                            <span class="coin-icon-small">🪙</span> 200
+                        </span>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="tienda-item">
+                    <div class="item-icon boost-icon">🛡️</div>
+                    <h4 class="item-name">Protector de Racha</h4>
+                    <p class="item-description">Protege tu racha por 1 día si no estudias</p>
+                    <div class="item-footer">
+                        <span class="item-price">
+                            <span class="coin-icon-small">🪙</span> 150
+                        </span>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="tienda-category-title">🎨 Personalización</h3>
+            <div class="tienda-grid">
+                <div class="tienda-item">
+                    <div class="item-icon avatar-icon">🎭</div>
+                    <h4 class="item-name">Avatar Especial</h4>
+                    <p class="item-description">Desbloquea un avatar único</p>
+                    <div class="item-footer">
+                        <span class="item-price">
+                            <span class="coin-icon-small">🪙</span> 500
+                        </span>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="tienda-item">
+                    <div class="item-icon avatar-icon">🎨</div>
+                    <h4 class="item-name">Tema de Color</h4>
+                    <p class="item-description">Cambia los colores de la interfaz</p>
+                    <div class="item-footer">
+                        <span class="item-price">
+                            <span class="coin-icon-small">🪙</span> 300
+                        </span>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="tienda-item">
+                    <div class="item-icon avatar-icon">✨</div>
+                    <h4 class="item-name">Efecto de Perfil</h4>
+                    <p class="item-description">Añade efectos especiales a tu perfil</p>
+                    <div class="item-footer">
+                        <span class="item-price">
+                            <span class="coin-icon-small">🪙</span> 400
+                        </span>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="quiz-title">Desafío 3</h2>
+                <div class="quiz-progress">
+                    <span id="question-counter">Pregunta 1 de 5</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="question-container">
+                    <p id="question-text" class="question-text">¿Cuál es el resultado de 2 + 2?</p>
+                    <div class="options-container" id="options-container">
+                        <button class="option-btn" data-option="a">
+                            <span class="option-letter">A</span>
+                            <span class="option-text">3</span>
+                        </button>
+                        <button class="option-btn" data-option="b">
+                            <span class="option-letter">B</span>
+                            <span class="option-text">4</span>
+                        </button>
+                        <button class="option-btn" data-option="c">
+                            <span class="option-letter">C</span>
+                            <span class="option-text">5</span>
+                        </button>
+                        <button class="option-btn" data-option="d">
+                            <span class="option-letter">D</span>
+                            <span class="option-text">6</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="check-answer-btn" class="check-btn">Comprobar</button>
+                <button id="next-question-btn" class="next-btn" style="display: none;">Siguiente</button>
+                <button id="close-modal-btn" class="close-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="results-modal" class="modal">
+        <div class="modal-content results-content">
+            <div class="results-header">
+                <h2>¡Desafío Completado!</h2>
+            </div>
+            <div class="results-body">
+                <div class="results-score">
+                    <div class="score-circle">
+                        <span id="final-score">4/5</span>
+                    </div>
+                    <p class="score-text">Respuestas correctas</p>
+                </div>
+                <div class="rewards">
+                    <div class="reward-item">
+                        <span class="reward-icon">🪙</span>
+                        <span class="reward-amount">+50 Monedas</span>
+                    </div>
+                    <div class="reward-item">
+                        <span class="reward-icon">⭐</span>
+                        <span class="reward-amount">+100 XP</span>
+                    </div>
+                </div>
+            </div>
+            <div class="results-footer">
+                <button id="continue-btn" class="continue-btn">Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materia View (Hidden by default) -->
+    <div class="materia-view" id="materia-view" style="display: none;">
+        <!-- Materia Header -->
+        <div class="materia-view-header">
+            <button class="materia-back-btn" id="materia-back-btn">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                </svg>
+                Volver
+            </button>
+            <button class="materia-live-btn">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
+                </svg>
+                Clase en Vivo
+            </button>
+            <button class="materia-settings-btn">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Materia Banner -->
+        <div class="materia-banner" id="materia-banner">
+            <div class="materia-banner-content">
+                <div class="materia-icon-banner" id="materia-icon-banner"></div>
+                <h1 class="materia-name" id="materia-name">Matemáticas</h1>
+            </div>
+        </div>
+
+        <!-- Materia Navigation Tabs -->
+        <nav class="materia-nav-tabs">
+            <button class="materia-nav-btn active" data-materia-tab="tablon">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                </svg>
+                Tablón
+            </button>
+            <button class="materia-nav-btn" data-materia-tab="trabajo">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                </svg>
+                Trabajo
+            </button>
+            <button class="materia-nav-btn" data-materia-tab="quizzes">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z" />
+                </svg>
+                Quizzes
+            </button>
+            <button class="materia-nav-btn" data-materia-tab="foro">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z" />
+                </svg>
+                Foro
+            </button>
+            <button class="materia-nav-btn" data-materia-tab="personas">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                </svg>
+                Personas
+            </button>
+            <button class="materia-nav-btn" data-materia-tab="ranking">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                Ranking
+            </button>
+            <button class="materia-nav-btn" data-materia-tab="notas">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                </svg>
+                Notas
+            </button>
+        </nav>
+
+        <!-- Materia Content Container -->
+        <div class="materia-content-container">
+            <!-- Tablón -->
+            <div id="tablon" class="materia-content-pane active">
+                <div class="materia-main-content">
+                    <div class="announcement-section">
+                        <div class="announcement-input">
+                            <div class="user-avatar-small">
+                                <img src="https://seamosgenios.org/Elementos/img/logo1.png" alt="P">
+                            </div>
+                            <input type="text" placeholder="Anuncia algo a la clase..." readonly>
+                        </div>
+                        <div class="upcoming-section">
+                            <h3>Próximas entregas</h3>
+                            <p class="no-upcoming">No tienes tareas pendientes para esta semana.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trabajo -->
+            <div id="trabajo" class="materia-content-pane">
+                <div class="materia-main-content">
+                    <div class="trabajo-layout">
+                        <!-- Main Content Area -->
+                        <div class="trabajo-main">
+                            <!-- Tema 1: Álgebra -->
+                            <div class="tema-section">
+                                <div class="tema-header">
+                                    <h3>📐 Tema 1: Álgebra y Ecuaciones</h3>
+                                    <span class="tema-count">3 materiales</span>
+                                </div>
+                                <div class="tema-items">
+                                    <!-- Material PDF -->
+                                    <div class="trabajo-item material-item">
+                                        <div class="item-icon pdf-icon">
+                                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                                            </svg>
+                                        </div>
+                                        <div class="item-content">
+                                            <h4>Guía de Álgebra - Ecuaciones Lineales</h4>
+                                            <p class="item-meta">PDF • Publicado el 10 dic</p>
+                                        </div>
+                                        <button class="view-btn"
+                                            onclick="window.open('https://drive.google.com/file/d/15HIYWWCuZiUuZELk9q6ZrfYPIGwDqtYZ/view', '_blank')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                                            </svg>
+                                            Ver
+                                        </button>
+                                    </div>
+
+                                    <!-- Grabación -->
+                                    <div class="trabajo-item recording-item">
+                                        <div class="item-icon video-icon">
+                                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="item-content">
+                                            <h4>Clase: Introducción al Álgebra</h4>
+                                            <p class="item-meta">Video • 45 min • Publicado el 9 dic</p>
+                                        </div>
+                                        <button class="view-btn"
+                                            onclick="window.open('https://drive.google.com/file/d/1M5znS7Sc-9S3yUaFZ98UG6gg2GeHyJ-6/view', '_blank')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                            Reproducir
+                                        </button>
+                                    </div>
+
+                                    <!-- Material adicional -->
+                                    <div class="trabajo-item material-item">
+                                        <div class="item-icon pdf-icon">
+                                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                                            </svg>
+                                        </div>
+                                        <div class="item-content">
+                                            <h4>Ejercicios Prácticos - Álgebra</h4>
+                                            <p class="item-meta">PDF • Publicado el 8 dic</p>
+                                        </div>
+                                        <button class="view-btn"
+                                            onclick="window.open('https://drive.google.com/file/d/15HIYWWCuZiUuZELk9q6ZrfYPIGwDqtYZ/view', '_blank')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                                            </svg>
+                                            Ver
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tema 2: Geometría -->
+                            <div class="tema-section">
+                                <div class="tema-header">
+                                    <h3>📏 Tema 2: Geometría</h3>
+                                    <span class="tema-count">2 materiales</span>
+                                </div>
+                                <div class="tema-items">
+                                    <div class="trabajo-item material-item">
+                                        <div class="item-icon pdf-icon">
+                                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                                            </svg>
+                                        </div>
+                                        <div class="item-content">
+                                            <h4>Teorema de Pitágoras y Aplicaciones</h4>
+                                            <p class="item-meta">PDF • Publicado el 5 dic</p>
+                                        </div>
+                                        <button class="view-btn"
+                                            onclick="window.open('https://drive.google.com/file/d/15HIYWWCuZiUuZELk9q6ZrfYPIGwDqtYZ/view', '_blank')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                                            </svg>
+                                            Ver
+                                        </button>
+                                    </div>
+
+                                    <div class="trabajo-item recording-item">
+                                        <div class="item-icon video-icon">
+                                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="item-content">
+                                            <h4>Clase: Geometría Plana</h4>
+                                            <p class="item-meta">Video • 50 min • Publicado el 4 dic</p>
+                                        </div>
+                                        <button class="view-btn"
+                                            onclick="window.open('https://drive.google.com/file/d/1M5znS7Sc-9S3yUaFZ98UG6gg2GeHyJ-6/view', '_blank')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                            Reproducir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar -->
+                        <div class="trabajo-sidebar">
+                            <div class="sidebar-section">
+                                <div class="sidebar-header">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                                    </svg>
+                                    Materiales
+                                    <span class="sidebar-count">0</span>
+                                </div>
+                                <button class="sidebar-add-btn">
+                                    + Nuevo Material
+                                </button>
+                                <p class="sidebar-empty">No hay materiales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quizzes -->
+            <div id="quizzes" class="materia-content-pane">
+                <div class="materia-main-content">
+                    <div class="content-placeholder">
+                        <p>No hay quizzes disponibles en este momento.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foro -->
+            <div id="foro" class="materia-content-pane">
+                <div class="materia-main-content">
+                    <div class="content-placeholder">
+                        <p>El foro estará disponible próximamente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personas -->
+            <div id="personas" class="materia-content-pane">
+                <div class="materia-main-content">
+                    <div class="content-placeholder">
+                        <p>Lista de estudiantes y profesores próximamente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ranking -->
+            <div id="ranking-materia" class="materia-content-pane">
+                <div class="materia-main-content">
+                    <div class="content-placeholder">
+                        <p>Ranking de la materia próximamente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notas -->
+            <div id="notas" class="materia-content-pane">
+                <div class="materia-main-content">
+                    <div class="content-placeholder">
+                        <p>Tus calificaciones aparecerán aquí.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

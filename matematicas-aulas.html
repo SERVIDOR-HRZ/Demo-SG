@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas - Aulas Virtuales | Seamos Genios</title>
+    <link rel="stylesheet" href="matematicas-aulas.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <img src="https://seamosgenios.org/Elementos/img/logo1.png" alt="Seamos Genios" class="logo">
+            <span class="brand-name">Seamos Genios</span>
+        </div>
+        <div class="header-right">
+            <button class="live-class-btn" id="live-class-btn">
+                <svg class="live-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                </svg>
+                <span class="live-text">Clase en Vivo</span>
+            </button>
+            <button class="settings-btn" id="settings-btn">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                </svg>
+            </button>
+            <div class="user-profile">
+                <img src="https://seamosgenios.org/Elementos/img/logo1.png" alt="Usuario Demo" class="user-avatar">
+                <span class="user-name">Usuario Demo</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <button class="breadcrumb-back-btn" onclick="window.location.href='index.html'">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Volver
+            </button>
+            <a href="index.html" class="breadcrumb-link">Inicio</a>
+            <span class="breadcrumb-separator">›</span>
+            <span class="breadcrumb-current">Matemáticas - Aulas</span>
+        </div>
+
+        <!-- Course Header -->
+        <div class="course-header">
+            <div class="course-icon">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-2h2v2zm0-4H7v-2h2v2zm0-4H7V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+            </div>
+            <div class="course-info">
+                <h1 class="course-title">Matemáticas</h1>
+                <p class="course-description">Álgebra, geometría, cálculo y preparación ICFES</p>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="tablero">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                </svg>
+                Tablero
+            </button>
+            <button class="tab-btn" data-tab="materiales">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                </svg>
+                Materiales
+            </button>
+            <button class="tab-btn" data-tab="quizzes">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                </svg>
+                Quizzes
+            </button>
+            <button class="tab-btn" data-tab="foro">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                </svg>
+                Foro
+            </button>
+            <button class="tab-btn" data-tab="personas">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+                Personas
+            </button>
+            <button class="tab-btn" data-tab="ranking">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Ranking
+            </button>
+            <button class="tab-btn" data-tab="notas">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                </svg>
+                Notas
+            </button>
+        </nav>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Tablero Tab -->
+            <div id="tablero" class="tab-pane active">
+                <div class="content-grid">
+                    <section class="announcements-section">
+                        <h2 class="section-title">
+                            <svg class="title-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z"/>
+                            </svg>
+                            Anuncios Recientes
+                        </h2>
+                        <div class="announcements-list">
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <span class="announcement-date">13 Dic 2025</span>
+                                </div>
+                                <h3 class="announcement-title">Bienvenidos al Aula de Matemáticas</h3>
+                                <p class="announcement-text">Aquí encontrarás todos los materiales, grabaciones y recursos para tu preparación ICFES.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <aside class="quick-stats">
+                        <div class="stat-box">
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                            </svg>
+                            <div class="stat-info">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Materiales</span>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <div class="stat-info">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Grabaciones</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <!-- Materiales Tab -->
+            <div id="materiales" class="tab-pane">
+                <h2 class="section-title">
+                    <svg class="title-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                    </svg>
+                    Materiales por Tema
+                </h2>
+
+                <!-- Grabaciones de Clase Section -->
+                <div class="topic-section">
+                    <div class="topic-header" data-toggle="collapse">
+                        <h3 class="topic-title">
+                            <svg class="topic-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                            </svg>
+                            Grabaciones de Clase
+                        </h3>
+                        <div class="topic-header-right">
+                            <span class="topic-count">5</span>
+                            <svg class="collapse-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="materials-list">
+                        <div class="material-item" data-url="https://drive.google.com/file/d/1frLMn_c--C3OWsIV9W7wUwAzbEFqScEn/view">
+                            <div class="material-item-icon video-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Clase 1: Introducción al Álgebra</h4>
+                                <p class="material-item-meta">Video • 45:30 min • 10 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                        <div class="material-item" data-url="https://drive.google.com/file/d/1frLMn_c--C3OWsIV9W7wUwAzbEFqScEn/view">
+                            <div class="material-item-icon video-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Clase 2: Ecuaciones Lineales</h4>
+                                <p class="material-item-meta">Video • 52:15 min • 8 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                        <div class="material-item" data-url="https://drive.google.com/file/d/1frLMn_c--C3OWsIV9W7wUwAzbEFqScEn/view">
+                            <div class="material-item-icon video-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Clase 3: Geometría Básica</h4>
+                                <p class="material-item-meta">Video • 38:45 min • 5 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tema: Álgebra -->
+                <div class="topic-section">
+                    <div class="topic-header" data-toggle="collapse">
+                        <h3 class="topic-title">
+                            <svg class="topic-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-2h2v2zm0-4H7v-2h2v2zm0-4H7V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                            </svg>
+                            Álgebra
+                        </h3>
+                        <div class="topic-header-right">
+                            <span class="topic-count">4</span>
+                            <svg class="collapse-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="materials-list">
+                        <div class="material-item" data-url="https://drive.google.com/file/d/15HIYWWCuZiUuZELk9q6ZrfYPIGwDqtYZ/view">
+                            <div class="material-item-icon pdf-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Guía de Álgebra Básica</h4>
+                                <p class="material-item-meta">PDF • 2.5 MB • Subido el 10 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                        <div class="material-item" data-url="https://drive.google.com/file/d/15HIYWWCuZiUuZELk9q6ZrfYPIGwDqtYZ/view">
+                            <div class="material-item-icon pdf-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Ejercicios de Ecuaciones</h4>
+                                <p class="material-item-meta">PDF • 1.8 MB • Subido el 8 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                        <div class="material-item" data-url="https://drive.google.com/file/d/1frLMn_c--C3OWsIV9W7wUwAzbEFqScEn/view">
+                            <div class="material-item-icon video-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Tutorial: Factorización</h4>
+                                <p class="material-item-meta">Video • 28:15 min • 6 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tema: Geometría -->
+                <div class="topic-section">
+                    <div class="topic-header" data-toggle="collapse">
+                        <h3 class="topic-title">
+                            <svg class="topic-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-6h2v4h-2z"/>
+                            </svg>
+                            Geometría
+                        </h3>
+                        <div class="topic-header-right">
+                            <span class="topic-count">3</span>
+                            <svg class="collapse-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="materials-list">
+                        <div class="material-item" data-url="https://drive.google.com/file/d/15HIYWWCuZiUuZELk9q6ZrfYPIGwDqtYZ/view">
+                            <div class="material-item-icon pdf-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Teoremas de Geometría</h4>
+                                <p class="material-item-meta">PDF • 3.1 MB • Subido el 7 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                        <div class="material-item" data-url="https://drive.google.com/file/d/15HIYWWCuZiUuZELk9q6ZrfYPIGwDqtYZ/view">
+                            <div class="material-item-icon pdf-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Áreas y Perímetros</h4>
+                                <p class="material-item-meta">PDF • 2.2 MB • Subido el 5 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tema: Cálculo -->
+                <div class="topic-section">
+                    <div class="topic-header" data-toggle="collapse">
+                        <h3 class="topic-title">
+                            <svg class="topic-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM11 7h2v2h-2zm0 4h2v6h-2z"/>
+                            </svg>
+                            Cálculo
+                        </h3>
+                        <div class="topic-header-right">
+                            <span class="topic-count">2</span>
+                            <svg class="collapse-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="materials-list">
+                        <div class="material-item" data-url="https://drive.google.com/file/d/15HIYWWCuZiUuZELk9q6ZrfYPIGwDqtYZ/view">
+                            <div class="material-item-icon pdf-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Introducción a Derivadas</h4>
+                                <p class="material-item-meta">PDF • 4.0 MB • Subido el 3 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                        <div class="material-item" data-url="https://drive.google.com/file/d/1frLMn_c--C3OWsIV9W7wUwAzbEFqScEn/view">
+                            <div class="material-item-icon video-icon">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="material-item-info">
+                                <h4 class="material-item-title">Límites y Continuidad</h4>
+                                <p class="material-item-meta">Video • 42:00 min • 1 Dic 2025</p>
+                            </div>
+                            <button class="material-view-btn">Ver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quizzes Tab -->
+            <div id="quizzes" class="tab-pane">
+                <h2 class="section-title">
+                    <svg class="title-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                    </svg>
+                    Quizzes y Evaluaciones
+                </h2>
+                <div class="quizzes-grid">
+                    <div class="quiz-card">
+                        <div class="quiz-header">
+                            <svg class="quiz-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
+                            </svg>
+                            <span class="quiz-status available">Disponible</span>
+                        </div>
+                        <h3 class="quiz-title">Quiz 1: Álgebra Básica</h3>
+                        <p class="quiz-description">Evaluación sobre ecuaciones lineales y factorización</p>
+                        <div class="quiz-meta">
+                            <span class="quiz-meta-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                </svg>
+                                30 min
+                            </span>
+                            <span class="quiz-meta-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                                </svg>
+                                Vence: 20 Dic 2025
+                            </span>
+                        </div>
+                        <button class="quiz-btn">Iniciar Quiz</button>
+                    </div>
+
+                    <div class="quiz-card">
+                        <div class="quiz-header">
+                            <svg class="quiz-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
+                            </svg>
+                            <span class="quiz-status completed">Completado</span>
+                        </div>
+                        <h3 class="quiz-title">Quiz 2: Geometría Plana</h3>
+                        <p class="quiz-description">Áreas, perímetros y teoremas fundamentales</p>
+                        <div class="quiz-meta">
+                            <span class="quiz-meta-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                Calificación: 85/100
+                            </span>
+                        </div>
+                        <button class="quiz-btn secondary">Ver Resultados</button>
+                    </div>
+
+                    <div class="quiz-card">
+                        <div class="quiz-header">
+                            <svg class="quiz-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
+                            </svg>
+                            <span class="quiz-status locked">Bloqueado</span>
+                        </div>
+                        <h3 class="quiz-title">Quiz 3: Cálculo Diferencial</h3>
+                        <p class="quiz-description">Límites, derivadas y aplicaciones</p>
+                        <div class="quiz-meta">
+                            <span class="quiz-meta-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                                </svg>
+                                Completa Quiz 1 para desbloquear
+                            </span>
+                        </div>
+                        <button class="quiz-btn" disabled>Bloqueado</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foro Tab -->
+            <div id="foro" class="tab-pane">
+                <div class="foro-header">
+                    <h2 class="section-title">
+                        <svg class="title-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                        Foro de Discusión
+                    </h2>
+                    <button class="new-topic-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                        Nuevo Tema
+                    </button>
+                </div>
+                <div class="forum-topics" id="forum-topics-list">
+                    <div class="forum-topic" data-topic-id="1">
+                        <div class="topic-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <div class="topic-content">
+                            <h3 class="topic-title">¿Cómo resolver ecuaciones cuadráticas?</h3>
+                            <p class="topic-preview">Tengo dudas sobre el método de completar el cuadrado...</p>
+                            <div class="topic-meta">
+                                <span class="topic-author">María González</span>
+                                <span class="topic-date">Hace 2 horas</span>
+                                <span class="topic-replies">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                                    </svg>
+                                    5 respuestas
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="forum-topic" data-topic-id="2">
+                        <div class="topic-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <div class="topic-content">
+                            <h3 class="topic-title">Teorema de Pitágoras - Aplicaciones prácticas</h3>
+                            <p class="topic-preview">Compartiendo algunos ejercicios interesantes del teorema...</p>
+                            <div class="topic-meta">
+                                <span class="topic-author">Carlos Ramírez</span>
+                                <span class="topic-date">Hace 5 horas</span>
+                                <span class="topic-replies">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                                    </svg>
+                                    12 respuestas
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="forum-topic" data-topic-id="3">
+                        <div class="topic-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <div class="topic-content">
+                            <h3 class="topic-title">Preparación para el ICFES - Tips y estrategias</h3>
+                            <p class="topic-preview">Hola a todos, quiero compartir algunas estrategias que me han funcionado...</p>
+                            <div class="topic-meta">
+                                <span class="topic-author">Ana Martínez</span>
+                                <span class="topic-date">Hace 1 día</span>
+                                <span class="topic-replies">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                                    </svg>
+                                    8 respuestas
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topic Discussion View -->
+                <div class="topic-discussion" id="topic-discussion" style="display: none;">
+                    <button class="back-to-topics-btn" id="back-to-topics">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                        Volver a temas
+                    </button>
+
+                    <div class="discussion-header">
+                        <h3 class="discussion-title" id="discussion-title"></h3>
+                        <div class="discussion-meta" id="discussion-meta"></div>
+                    </div>
+
+                    <div class="discussion-posts" id="discussion-posts"></div>
+
+                    <div class="reply-form">
+                        <h4 class="reply-form-title">Escribe tu respuesta</h4>
+                        <textarea class="reply-textarea" placeholder="Escribe tu respuesta aquí..."></textarea>
+                        <button class="reply-submit-btn">Publicar Respuesta</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personas Tab -->
+            <div id="personas" class="tab-pane">
+                <h2 class="section-title">
+                    <svg class="title-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                    Personas
+                </h2>
+
+                <!-- Profesores -->
+                <div class="people-section">
+                    <h3 class="people-section-title">Profesores</h3>
+                    <div class="people-grid">
+                        <div class="person-card teacher">
+                            <div class="person-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="person-info">
+                                <h4 class="person-name">Prof. Juan Pérez</h4>
+                                <p class="person-role">Profesor Principal</p>
+                                <p class="person-email">juan.perez@seamosgenios.org</p>
+                            </div>
+                        </div>
+
+                        <div class="person-card teacher">
+                            <div class="person-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="person-info">
+                                <h4 class="person-name">Prof. Laura Gómez</h4>
+                                <p class="person-role">Profesora Asistente</p>
+                                <p class="person-email">laura.gomez@seamosgenios.org</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estudiantes -->
+                <div class="people-section">
+                    <h3 class="people-section-title">Estudiantes (24)</h3>
+                    <div class="people-grid">
+                        <div class="person-card student">
+                            <div class="person-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="person-info">
+                                <h4 class="person-name">María González</h4>
+                                <p class="person-role">Estudiante</p>
+                            </div>
+                        </div>
+
+                        <div class="person-card student">
+                            <div class="person-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="person-info">
+                                <h4 class="person-name">Carlos Ramírez</h4>
+                                <p class="person-role">Estudiante</p>
+                            </div>
+                        </div>
+
+                        <div class="person-card student">
+                            <div class="person-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="person-info">
+                                <h4 class="person-name">Ana Martínez</h4>
+                                <p class="person-role">Estudiante</p>
+                            </div>
+                        </div>
+
+                        <div class="person-card student">
+                            <div class="person-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="person-info">
+                                <h4 class="person-name">Luis Torres</h4>
+                                <p class="person-role">Estudiante</p>
+                            </div>
+                        </div>
+
+                        <div class="person-card student">
+                            <div class="person-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="person-info">
+                                <h4 class="person-name">Sofia López</h4>
+                                <p class="person-role">Estudiante</p>
+                            </div>
+                        </div>
+
+                        <div class="person-card student">
+                            <div class="person-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="person-info">
+                                <h4 class="person-name">Diego Vargas</h4>
+                                <p class="person-role">Estudiante</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ranking Tab -->
+            <div id="ranking" class="tab-pane">
+                <h2 class="section-title">
+                    <svg class="title-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    Ranking del Curso
+                </h2>
+
+                <!-- Top 3 Podium -->
+                <div class="podium">
+                    <div class="podium-place second">
+                        <div class="podium-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <div class="podium-medal">2</div>
+                        <h4 class="podium-name">Carlos Ramírez</h4>
+                        <p class="podium-points">1,850 XP</p>
+                    </div>
+
+                    <div class="podium-place first">
+                        <div class="podium-crown">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="podium-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <div class="podium-medal">1</div>
+                        <h4 class="podium-name">María González</h4>
+                        <p class="podium-points">2,340 XP</p>
+                    </div>
+
+                    <div class="podium-place third">
+                        <div class="podium-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <div class="podium-medal">3</div>
+                        <h4 class="podium-name">Ana Martínez</h4>
+                        <p class="podium-points">1,720 XP</p>
+                    </div>
+                </div>
+
+                <!-- Ranking List -->
+                <div class="ranking-list">
+                    <div class="ranking-item">
+                        <span class="ranking-position">4</span>
+                        <div class="ranking-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <span class="ranking-name">Luis Torres</span>
+                        <span class="ranking-points">1,520 XP</span>
+                    </div>
+
+                    <div class="ranking-item">
+                        <span class="ranking-position">5</span>
+                        <div class="ranking-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <span class="ranking-name">Sofia López</span>
+                        <span class="ranking-points">1,380 XP</span>
+                    </div>
+
+                    <div class="ranking-item">
+                        <span class="ranking-position">6</span>
+                        <div class="ranking-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <span class="ranking-name">Diego Vargas</span>
+                        <span class="ranking-points">1,240 XP</span>
+                    </div>
+
+                    <div class="ranking-item current-user">
+                        <span class="ranking-position">7</span>
+                        <div class="ranking-avatar">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <span class="ranking-name">Usuario Demo (Tú)</span>
+                        <span class="ranking-points">1,120 XP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notas Tab -->
+            <div id="notas" class="tab-pane">
+                <h2 class="section-title">
+                    <svg class="title-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                    </svg>
+                    Mis Notas
+                </h2>
+
+                <!-- Resumen General -->
+                <div class="grades-summary">
+                    <div class="summary-card">
+                        <h3 class="summary-title">Promedio General</h3>
+                        <div class="summary-grade">82.5</div>
+                        <p class="summary-label">Sobresaliente</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3 class="summary-title">Quizzes Completados</h3>
+                        <div class="summary-grade">3/5</div>
+                        <p class="summary-label">60% Completado</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3 class="summary-title">Asistencia</h3>
+                        <div class="summary-grade">95%</div>
+                        <p class="summary-label">Excelente</p>
+                    </div>
+                </div>
+
+                <!-- Tabla de Notas -->
+                <div class="grades-table-container">
+                    <table class="grades-table">
+                        <thead>
+                            <tr>
+                                <th>Evaluación</th>
+                                <th>Fecha</th>
+                                <th>Calificación</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="grade-item-info">
+                                        <svg class="grade-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
+                                        </svg>
+                                        Quiz 1: Álgebra Básica
+                                    </div>
+                                </td>
+                                <td>5 Dic 2025</td>
+                                <td>
+                                    <span class="grade-score excellent">90/100</span>
+                                </td>
+                                <td>
+                                    <span class="grade-status completed">Completado</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="grade-item-info">
+                                        <svg class="grade-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
+                                        </svg>
+                                        Quiz 2: Geometría Plana
+                                    </div>
+                                </td>
+                                <td>8 Dic 2025</td>
+                                <td>
+                                    <span class="grade-score good">85/100</span>
+                                </td>
+                                <td>
+                                    <span class="grade-status completed">Completado</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="grade-item-info">
+                                        <svg class="grade-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
+                                        </svg>
+                                        Tarea: Ejercicios de Factorización
+                                    </div>
+                                </td>
+                                <td>10 Dic 2025</td>
+                                <td>
+                                    <span class="grade-score average">72/100</span>
+                                </td>
+                                <td>
+                                    <span class="grade-status completed">Completado</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="grade-item-info">
+                                        <svg class="grade-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
+                                        </svg>
+                                        Quiz 3: Cálculo Diferencial
+                                    </div>
+                                </td>
+                                <td>15 Dic 2025</td>
+                                <td>
+                                    <span class="grade-score pending">-</span>
+                                </td>
+                                <td>
+                                    <span class="grade-status pending">Pendiente</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="grade-item-info">
+                                        <svg class="grade-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
+                                        </svg>
+                                        Examen Final
+                                    </div>
+                                </td>
+                                <td>20 Dic 2025</td>
+                                <td>
+                                    <span class="grade-score pending">-</span>
+                                </td>
+                                <td>
+                                    <span class="grade-status pending">Pendiente</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Viewer Modal -->
+    <div id="viewer-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="viewer-title" class="modal-title">Visualizador</h2>
+                <button class="close-modal-btn" id="close-viewer">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="content-viewer" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="matematicas-aulas.js"></script>
+</body>
+</html>
